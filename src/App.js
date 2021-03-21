@@ -1,4 +1,4 @@
-import './App.css';
+import './css/App.css';
 import DataGrid from "./data-grid/containers/DataGridContainer";
 
 function App() {
