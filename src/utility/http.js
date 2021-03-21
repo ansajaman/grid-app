@@ -2,7 +2,7 @@ import axios from "axios";
 import {initializeAxiosMockAdapter, isMockEnabled,} from "./mock.config";
 
 let instance = axios.create({
-    baseURL: "http://localhost:8000",
+    baseURL: "http://localhost:8080",
     headers: {
         "Content-type": "application/json"
     }
