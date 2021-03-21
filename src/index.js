@@ -1,13 +1,23 @@
 import React from 'react';
+import { createStore, applyMiddleware } from "redux";
+import { composeWithDevTools } from 'redux-devtools-extension';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import thunk from "redux-thunk";
+import { Provider } from 'react-redux'
+import {gridReducer} from './store/reducers';
+
+
+const store = createStore(gridReducer, composeWithDevTools(applyMiddleware(thunk)));
+
+
 
 ReactDOM.render(
-  <React.StrictMode>
+  <Provider store={store}>
     <App />
-  </React.StrictMode>,
+  </Provider>,
   document.getElementById('root')
 );
 
