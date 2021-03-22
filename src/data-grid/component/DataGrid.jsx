@@ -30,7 +30,6 @@ export const DataGrid = (props) => {
         { headerName: "Age", field: "age" },
         { headerName: "Email", field: "email" },
         { headerName: "Pin Code", field: "pincode" }
-
     ];
 
     const rows = props.users;
