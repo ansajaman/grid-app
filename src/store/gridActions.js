@@ -1,10 +1,13 @@
 import {http} from "../utility/http";
 import {GRID_ACTION_TYPES} from "./gridActionTypes";
 
-export const addUser = (data) => ({
-    type: GRID_ACTION_TYPES.ADD_USER,
-    data
-});
+export function addUser(data) {
+    return (dispatch) => {
+        http.post('/user', JSON.stringify(data)).then((res) => {
+            dispatch({type : GRID_ACTION_TYPES.ADD_USER, data: data});
+        });
+    };
+}
 
 export function getAllUsers() {
     return (dispatch) => {
