@@ -1,8 +1,5 @@
 package com.grid;
 
-import org.springframework.stereotype.Component;
-
-@Component
 public class UserInfo {
 	private String name;
 	private int age;
