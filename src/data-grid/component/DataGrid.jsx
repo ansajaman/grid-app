@@ -26,10 +26,10 @@ export const DataGrid = (props) => {
     }
 
     const columnDefs = [
-        { headerName: "Name", field: "name" },
-        { headerName: "Age", field: "age" },
-        { headerName: "Email", field: "email" },
-        { headerName: "Pin Code", field: "pincode" }
+        { headerName: "Name", field: "name", filter: "agTextColumnFilter" },
+        { headerName: "Age", field: "age", filter: "agTextColumnFilter" },
+        { headerName: "Email", field: "email", filter: "agTextColumnFilter" },
+        { headerName: "Pin Code", field: "pincode", filter: "agTextColumnFilter" }
     ];
 
     const rows = props.users;
@@ -41,6 +41,7 @@ export const DataGrid = (props) => {
                 className="ag-theme-balham grid-css">
                 <AgGridReact
                     columnDefs={columnDefs}
+                    defaultColDef={{filter: true}}
                     rowData={rows}>
                 </AgGridReact>
             </div>
